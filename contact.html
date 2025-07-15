@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Omar Elsheikh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Omar Elsheikh</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Get In Touch</h1>
+            <p>I'm always interested in discussing new opportunities and data challenges</p>
+        </div>
+
+        <div class="contact-content">
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                Whether you have a question about my work, want to discuss a potential project, 
+                or just want to connect, I'd love to hear from you. Feel free to reach out through 
+                any of the channels below.
+            </p>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:omar.elsheikh@example.com">omar.elsheikh@example.com</a>
+                </div>
+
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/omarelsheikh" target="_blank">linkedin.com/in/omarelsheikh</a>
+                </div>
+
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/omarelsheikh" target="_blank">github.com/omarelsheikh</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding: 2rem; background-color: #f3f4f6; border-radius: 0.75rem;">
+                <h3 style="margin-bottom: 1rem; color: var(--primary-color);">Open to Opportunities</h3>
+                <p style="color: var(--text-dark);">
+                    I'm currently open to new data engineering and data science opportunities. 
+                    If you're looking for someone who can build robust data infrastructure, 
+                    develop machine learning solutions, or help transform your data strategy, 
+                    let's connect!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add active class to current navigation item
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Omar Elsheikh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Omar Elsheikh</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>About Me</h1>
+            <p>Data Engineer & Data Scientist passionate about building scalable data solutions</p>
+        </div>
+
+        <div class="about-content">
+            <div class="bio-section">
+                <p>
+                    I'm a data professional with a strong background in building end-to-end data solutions that drive business value. 
+                    With expertise spanning data engineering, machine learning, and analytics, I specialize in designing and 
+                    implementing scalable data pipelines, developing predictive models, and creating data-driven insights.
+                </p>
+                <p>
+                    My approach combines technical excellence with business acumen, ensuring that data solutions not only 
+                    perform well technically but also deliver measurable impact. I'm passionate about data quality, 
+                    automation, and making complex data accessible to stakeholders at all levels.
+                </p>
+                <p>
+                    When I'm not building data pipelines or training models, you can find me exploring new technologies, 
+                    contributing to open-source projects, or sharing knowledge through technical writing and mentoring.
+                </p>
+            </div>
+
+            <div class="skills-section">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages & Frameworks</h3>
+                        <ul class="skill-list">
+                            <li>Python (NumPy, Pandas, Scikit-learn)</li>
+                            <li>SQL (PostgreSQL, MySQL, Snowflake)</li>
+                            <li>Scala/Java for Spark</li>
+                            <li>R for statistical analysis</li>
+                            <li>Shell scripting (Bash)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data Engineering</h3>
+                        <ul class="skill-list">
+                            <li>Apache Spark & PySpark</li>
+                            <li>Apache Kafka & Streaming</li>
+                            <li>dbt (data build tool)</li>
+                            <li>Apache Airflow</li>
+                            <li>ETL/ELT Pipeline Design</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Cloud & Infrastructure</h3>
+                        <ul class="skill-list">
+                            <li>AWS (S3, EMR, Glue, Lambda)</li>
+                            <li>Google Cloud Platform</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>Terraform for IaC</li>
+                            <li>CI/CD (Jenkins, GitHub Actions)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Data Science & Analytics</h3>
+                        <ul class="skill-list">
+                            <li>Machine Learning (Supervised/Unsupervised)</li>
+                            <li>Deep Learning (TensorFlow, PyTorch)</li>
+                            <li>Statistical Analysis & A/B Testing</li>
+                            <li>Data Visualization (Tableau, Power BI)</li>
+                            <li>MLOps (MLflow, Kubeflow)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add active class to current navigation item
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

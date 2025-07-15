@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Omar Elsheikh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">Omar Elsheikh</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Projects</h1>
+            <p>A selection of data engineering and data science projects showcasing my technical expertise</p>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Real-time Data Pipeline for E-commerce Analytics</h3>
+                <p class="project-description">
+                    Built a scalable real-time data pipeline processing millions of e-commerce transactions daily. 
+                    Implemented Apache Kafka for streaming data ingestion and Apache Spark for real-time processing. 
+                    Reduced data latency by 80% and enabled real-time business intelligence dashboards.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Apache Kafka</span>
+                    <span class="tech-tag">Apache Spark</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+                <a href="#" class="btn btn-primary">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Customer Churn Prediction Model</h3>
+                <p class="project-description">
+                    Developed a machine learning model to predict customer churn for a SaaS company. 
+                    Utilized ensemble methods achieving 92% accuracy in identifying at-risk customers. 
+                    Implementation resulted in a 25% reduction in customer churn through targeted retention campaigns.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">XGBoost</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">MLflow</span>
+                </div>
+                <a href="#" class="btn btn-primary">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Data Warehouse Modernization with dbt</h3>
+                <p class="project-description">
+                    Led the migration of legacy ETL processes to a modern ELT architecture using dbt and Snowflake. 
+                    Implemented data quality tests and documentation, improving data reliability by 95%. 
+                    Reduced data transformation time from hours to minutes while enabling self-service analytics.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">dbt</span>
+                    <span class="tech-tag">Snowflake</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Airflow</span>
+                    <span class="tech-tag">Git</span>
+                </div>
+                <a href="#" class="btn btn-primary">View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Automated Data Quality Monitoring System</h3>
+                <p class="project-description">
+                    Created an automated data quality monitoring system that performs real-time validation checks on incoming data. 
+                    Built custom anomaly detection algorithms to identify data quality issues before they impact downstream systems. 
+                    Reduced data-related incidents by 70% and improved overall data trust across the organization.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Great Expectations</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Grafana</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+                <a href="#" class="btn btn-primary">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add active class to current navigation item
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === currentLocation) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
