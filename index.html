@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Elsheikh - Data Engineer | Data Scientist</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-brand">Omar Elsheikh</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -21,6 +27,12 @@
     </nav>
 
     <section class="hero">
+        <div class="profile-section">
+            <div class="profile-image-container">
+                <img src="images/profile.jpg" alt="Omar Elsheikh" class="profile-image">
+                <div class="profile-image-border"></div>
+            </div>
+        </div>
         <h1>Omar Elsheikh</h1>
         <p class="subtitle">Data Engineer | Data Scientist</p>
         <p class="hero-description">
@@ -29,23 +41,15 @@
             modern data engineering practices and advanced analytics.
         </p>
         <div class="cta-buttons">
-            <a href="projects.html" class="btn btn-primary">View My Projects</a>
-            <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            <a href="projects.html" class="btn btn-primary">
+                <i class="fas fa-folder-open"></i> View My Projects
+            </a>
+            <a href="contact.html" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i> Get In Touch
+            </a>
         </div>
     </section>
 
-    <script>
-        // Add active class to current navigation item
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentLocation = location.pathname.split('/').pop() || 'index.html';
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if(link.getAttribute('href') === currentLocation) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
