@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Omar Elsheikh</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <a href="index.html" class="nav-brand">Omar Elsheikh</a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
@@ -29,6 +35,7 @@
         <div class="about-content">
             <div class="bio-section">
                 <p>
+                    <i class="fas fa-quote-left" style="color: var(--primary-light); margin-right: 0.5rem;"></i>
                     I'm a data professional with a strong background in building end-to-end data solutions that drive business value. 
                     With expertise spanning data engineering, machine learning, and analytics, I specialize in designing and 
                     implementing scalable data pipelines, developing predictive models, and creating data-driven insights.
@@ -41,6 +48,7 @@
                 <p>
                     When I'm not building data pipelines or training models, you can find me exploring new technologies, 
                     contributing to open-source projects, or sharing knowledge through technical writing and mentoring.
+                    <i class="fas fa-quote-right" style="color: var(--primary-light); margin-left: 0.5rem;"></i>
                 </p>
             </div>
 
@@ -48,7 +56,7 @@
                 <h2>Technical Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Languages & Frameworks</h3>
+                        <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
                         <ul class="skill-list">
                             <li>Python (NumPy, Pandas, Scikit-learn)</li>
                             <li>SQL (PostgreSQL, MySQL, Snowflake)</li>
@@ -59,7 +67,7 @@
                     </div>
 
                     <div class="skill-category">
-                        <h3>Data Engineering</h3>
+                        <h3><i class="fas fa-database"></i> Data Engineering</h3>
                         <ul class="skill-list">
                             <li>Apache Spark & PySpark</li>
                             <li>Apache Kafka & Streaming</li>
@@ -70,7 +78,7 @@
                     </div>
 
                     <div class="skill-category">
-                        <h3>Cloud & Infrastructure</h3>
+                        <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
                         <ul class="skill-list">
                             <li>AWS (S3, EMR, Glue, Lambda)</li>
                             <li>Google Cloud Platform</li>
@@ -81,7 +89,7 @@
                     </div>
 
                     <div class="skill-category">
-                        <h3>Data Science & Analytics</h3>
+                        <h3><i class="fas fa-brain"></i> Data Science & Analytics</h3>
                         <ul class="skill-list">
                             <li>Machine Learning (Supervised/Unsupervised)</li>
                             <li>Deep Learning (TensorFlow, PyTorch)</li>
@@ -95,18 +103,6 @@
         </div>
     </div>
 
-    <script>
-        // Add active class to current navigation item
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentLocation = location.pathname.split('/').pop() || 'index.html';
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if(link.getAttribute('href') === currentLocation) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
